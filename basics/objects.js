@@ -1,7 +1,9 @@
 //constructors used = singleton
 
-//object literals
 const sym = Symbol("ibu hatela")
+
+//object literals
+
 const user = {
     name : "tatya bichu",
     age : 134,
