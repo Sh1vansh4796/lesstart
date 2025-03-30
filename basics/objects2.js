@@ -40,3 +40,20 @@ console.log(userArr[2].ID)
 console.log(Object.keys(tinderUser)) // gives an array
 console.log(Object.values(tinderUser))
 console.log(Object.entries(tinderUser))
+
+//de-structuring
+const course = {
+    coursename : "chunin exams",
+    teacher : "Hatake Kakashi",
+    price : 106
+}
+
+const {coursename : exam} = course
+console.log(exam)
+
+
+// bina naam object = jason
+// {
+//     "name" : "shivansh",
+//     "serial" : "22je0912"
+// }
