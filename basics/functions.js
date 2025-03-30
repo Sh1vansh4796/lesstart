@@ -33,4 +33,3 @@ function legendary(anyObject){
 }
 console.log(legendary(user))
 
-console.log("Vinland saga dekh na Mc")
