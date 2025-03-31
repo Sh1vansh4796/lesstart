@@ -1,1 +1,0 @@
-console.log("V  INLAND SAGA KAB DEKHEGA bsdk")

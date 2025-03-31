@@ -33,3 +33,16 @@ function legendary(anyObject){
 }
 console.log(legendary(user))
 
+//mini hoisting
+
+console.log(method1(5))
+
+function method1(num){
+    return num+1;
+}
+
+//console.log(met2(5)) //doesnt work before
+const met2 = function(num){
+    return num+1;
+}
+console.log(met2(5))
