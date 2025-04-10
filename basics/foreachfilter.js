@@ -41,3 +41,5 @@ console.log("array ka object ka item")
 objarr.forEach((item) =>{
     console.log(item.boss)
 })
+
+
