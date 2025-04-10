@@ -43,3 +43,24 @@ objarr.forEach((item) =>{
 })
 
 
+// for each doesnt return values
+
+const myNumms = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(myNumms.filter((nums) => nums>=5 ))
+
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(myNums.filter((nums) => {
+    return nums>5
+} ))
+
+//maps
+console.log("maps here")
+console.log(myNumms.map((nums) => nums*10))
+
+//filter + map
+
+const ans = myNumms.filter((numb) => numb>5)
+                    .map((nums) => nums*10)
+                    .map((num) => num+1)
+                    .filter((nums) => nums<90)
+console.log(ans)
