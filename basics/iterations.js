@@ -23,7 +23,7 @@ while(itr<bigFour.length){
 
 //[{},{},{}]
 //["","",""]
-//for off loop
+//for of loop
 console.log("forof loop now")
 
 for (const i of bigFour) {

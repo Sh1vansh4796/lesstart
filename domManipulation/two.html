@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM aur chai</title>
+</head>
+<body style = "background-color: black; color: aliceblue;">
+    <p>use div.day*4 </p>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+    </div>    
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent)
+    console.log(parent.children)
+
+    for(i = 0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML)
+    }
+    parent.children[1].style.color = "orange";
+    console.log(parent.lastElementChild)
+    console.log("Nodes are :-   ",parent.childNodes)
+
+
+    const div = document.createElement("div");
+    console.log(div)
+    div.className = "main"
+    div.id = Math.random()*10 + 1
+
+</script>
+</html>

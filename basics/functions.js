@@ -1,5 +1,5 @@
 function sayMyName(){
-    console.log("walter white bitch")
+    console.log("heisenberg")
 }
 sayMyName()
 
