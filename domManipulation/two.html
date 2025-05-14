@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM aur chai</title>
+    <style>
+        .red-color{
+            color : red
+
+            
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style = "background-color: black; color: aliceblue;">
-    <p>use div.day*4 </p>
+<body id="abc"; style = "background-color: black; color: aliceblue;">
+    <p id = "disc" >use div and day </p>
     <div class="parent">
         <div class="day">monday</div>
         <div class="day">tuesday</div>
@@ -35,6 +45,29 @@
     console.log(div)
     div.className = "main"
     div.id = Math.random()*10 + 1
+
+    const hel = document.querySelector("div")
+    console.log(hel.parentElement.children)
+
+    console.log(hel.children)
+
+    const cuser = document.getElementById("abc")
+    console.log("hello mr ", cuser)
+
+    const disc = document.getElementById("disc")
+    // inject class in a given ID
+    disc.classList.add("red-color","underline")
+    
+
+    const myClass = document.getElementsByClassName("day")
+    for(let i = 0; i<myClass.length ; i++){
+        console.log(myClass[i].innerHTML)
+        console.log(myClass[i])
+    }
+    for(let i = 1; i<myClass.length ; i++){
+        myClass[i].style.background = "green";
+    }
+
 
 </script>
 </html>

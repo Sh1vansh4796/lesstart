@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id = "element">Click Here</button>
+        <button id = "touch">Touch me</button>
+    </div>
+    <script>
+        const ele = document.getElementById("element");
+        ele.onclick = ()=>{
+            console.log("yamete")
+        }
+    </script>
+    <script>
+        const el = document.getElementById("touch");
+        el.addEventListener("click",function(){
+            console.log("Yammete kudasai")
+        })
+    </script>
+</body>
+</html>
