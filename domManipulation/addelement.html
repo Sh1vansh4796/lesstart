@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+        <li>Python</li>
+    </ul>
+
+    <script>
+        function addLan(langname){
+            const li = document.createElement('li');
+            li.innerHTML= langname;
+            document.querySelector('.language').appendChild(li)
+
+        }
+        function optimisedaddLan(langname){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langname)); //bss ye line hange karni hai coz innerHTML not optimised tree traversal
+            document.querySelector('.language').appendChild(li)
+
+        }
+        addLan("C++")
+        optimisedaddLan('java')
+
+
+
+        //editing 
+        const firstlan = document.querySelector("li:first-child")
+        firstlan.innerHTML = "typeScript"
+
+
+        //deletion
+        const lastlan = document.querySelector("li:last-child")
+        lastlan.remove()
+
+    </script>
+</body>
+</html>
