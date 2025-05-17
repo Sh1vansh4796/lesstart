@@ -36,3 +36,16 @@ console.log(user.greeting());
 console.log(user.greetingTwo());
 
 
+//methods 
+
+const maths = {
+    multiply : (x,y) =>{
+        return x*y;
+    },
+    add : (x,y) =>{
+        return x+y;
+    },
+    sub : (x,y) =>{
+        return x-y;
+        }
+}
