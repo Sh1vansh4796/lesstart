@@ -12,3 +12,6 @@ button.addEventListener('click', async () => {
     console.log(result); // this will print the weather info in the browser console
 });
 // this type
+
+
+

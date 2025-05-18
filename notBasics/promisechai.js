@@ -39,4 +39,38 @@ promise4.then((user)=>{
     
 }).catch((err)=>{
     console.log(err)
+}).finally(console.log("promise resolved at last probably")
+)
+
+
+const promise5 = new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        let err = false;
+        if(!err) resolve({username : "artorius" , password : "123"})
+        else reject("Something went wrong")
+
+    }, 1000 );
 })
+
+
+//async await
+
+async function promiseConsume(){
+    const response = await promise5
+    console.log(response);
+    
+}
+promiseConsume()
+
+// try catch syntax
+
+async function promiseConsume5(){
+    try {
+        const response = await promise5;
+        console.log(response);
+    } catch (error) {
+        console.log("Error caught:", error);
+    }
+}
+
+promiseConsume5()
