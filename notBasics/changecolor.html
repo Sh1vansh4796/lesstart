@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const body = document.querySelector('body')
+        setTimeout(()=>{
+            body.style.background = 'red'
+            setTimeout(()=>{
+                body.style.background = 'orange'
+                setTimeout(()=>{
+                    body.style.background = 'yellow'
+                            setTimeout(()=>{
+                                body.style.background = 'green'
+                                setTimeout(()=>{
+                                    body.style.background = 'blue'
+                                    setTimeout(()=>{
+                                        body.style.background = 'indigo'
+                                        setTimeout(()=>{
+                                            body.style.background = 'violet'
+                                        },1000)
+                                    },1000)
+                                },1000)
+                            },1000)
+
+                },1000)
+            },1000)
+        },1000)
+
+
+        // now better way
+
+        const colorChange = (newcolor,delay,donext)=>{
+            setTimeout(()=>{
+                body.style.background = newcolor;
+                donext()
+            },delay)
+        }
+        colorChange('orange',10000,()=>{
+            console.log("changed")
+        })
+        
+        
+        
+    </script>
+</body>
+</html>

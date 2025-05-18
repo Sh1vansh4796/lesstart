@@ -6,7 +6,7 @@ const resetbutton = document.querySelector('#reset')
 const playto = document.querySelector('#playto')
 let p1score = 0;
 let p2score = 0;
-let winscore = 5;
+let winscore = 3;
 let isGameOver = false;
 
 
@@ -15,6 +15,8 @@ p1button.addEventListener('click',()=>{
         p1score+=1;
         p1display.textContent = p1score
         if(p1score === winscore){
+            p1display.classList.add('winner')
+            p2display.classList.add('loser')
         isGameOver = true
         }
     }
@@ -23,8 +25,10 @@ p2button.addEventListener('click',()=>{
     if(!isGameOver){
         p2score+=1;
         p2display.textContent = p2score
-        if(p1score === winscore){
+        if(p2score === winscore){
         isGameOver = true
+        p2display.classList.add('winner')
+        p1display.classList.add('loser')
         }
     }
 })
@@ -41,4 +45,6 @@ function reset(){
     p2score = 0;
     p1display.textContent = 0;
     p2display.textContent = 0;
+    p1display.classList.remove('winner','loser')
+    p2display.classList.remove('loser','winner')
 }
